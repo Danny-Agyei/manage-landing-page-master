@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <title>Manage landing page</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="site-header u-flex-row">
+      <a href="/"
+        ><img
+          class="site-header__logo"
+          src="./images/logo.svg"
+          alt="Manage Home"
+          width="100"
+          height="100"
+      /></a>
+      <nav id="nav-main" class="navbar" aria-label="Primary">
+        <div id="js-navbar-overlay" class="navbar__overlay"></div>
+        <ul id="js-navbar-menu" class="navbar__menu u-flex-column">
+          <li>
+            <a class="navbar__link js-navbar-trigger" href="/pricing"
+              >Pricing</a
+            >
+          </li>
+          <li>
+            <a class="navbar__link js-navbar-trigger" href="/pricing"
+              >Product</a
+            >
+          </li>
+          <li>
+            <a class="navbar__link js-navbar-trigger" href="/pricing"
+              >About Us</a
+            >
+          </li>
+          <li>
+            <a class="navbar__link js-navbar-trigger" href="/pricing"
+              >Careers</a
+            >
+          </li>
+          <li>
+            <a class="navbar__link js-navbar-trigger" href="/pricing"
+              >Community</a
+            >
+          </li>
+        </ul>
+
+        <div class="navbar__controls">
+          <button
+            class="btn navbar__btn-open js-navbar__trigger"
+            aria-expanded="false"
+            aria-controls="nav-main"
+            aria-label="Open primary navigation"
+          >
+            <img
+              src="./images/icon-hamburger.svg"
+              width="30"
+              height="30"
+              alt=""
+              class="navbar__hamburger"
+            />
+          </button>
+          <button
+            class="btn navbar__btn-close js-navbar__trigger"
+            aria-expanded="false"
+            aria-controls="nav-main"
+            aria-label="close primary navigation"
+          >
+            <img src="./images/icon-close.svg" width="25" height="25" alt="" />
+          </button>
+        </div>
+      </nav>
+      <a href="#" class="site-header__btn btn btn--primary">Get Started</a>
+    </header>
+    <main>
+      <section class="hero">
+        <div class="l-section-container">
+          <div class="l-section-inner u-even-column">
+            <div class="hero__banner">
+              <img
+                src="./images/illustration-intro.svg"
+                alt="Illustration showing increase in productivity"
+                class="hero__image"
+                width="300"
+                height="300"
+              />
+            </div>
+            <div class="hero__content u-flex-column">
+              <h1 class="hero__heading u-heading-primary">
+                Bring everyone together to build better products.
+              </h1>
+              <p class="hero__decscription">
+                Manage makes it simple for software teams to plan day-to-day
+                tasks while keeping the larger team goals in view.
+              </p>
+              <a href="#" class="hero__btn btn btn--primary">Get Started</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="features">
+        <div class="l-section-container">
+          <div class="l-section-inner u-even-column">
+            <div class="features__header">
+              <h2 class="features__heading u-heading-secondary">
+                What’s different about Manage?
+              </h2>
+              <p class="features__decscription">
+                Manage provides all the functionality your team needs, without
+                the complexity. Our software is tailor-made for modern digital
+                product teams.
+              </p>
+            </div>
+
+            <ul class="features__list">
+              <li class="features__item">
+                <div class="features__item-header">
+                  <span class="features__numbering">01</span>
+                  <h3 class="features__sub-heading u-sub-heading">
+                    Track company-wide progress
+                  </h3>
+                </div>
+                <p class="features__item-description">
+                  See how your day-to-day tasks fit into the wider vision. Go
+                  from tracking progress at the milestone level all the way done
+                  to the smallest of details. Never lose sight of the bigger
+                  picture again.
+                </p>
+              </li>
+
+              <li class="features__item">
+                <div class="features__item-header">
+                  <span class="features__numbering">02</span>
+                  <h3 class="features__sub-heading u-sub-heading">
+                    Advanced built-in reports
+                  </h3>
+                </div>
+                <p class="features__item-description">
+                  Set internal delivery estimates and track progress toward
+                  company goals. Our customisable dashboard helps you build out
+                  the reports you need to keep key stakeholders informed.
+                </p>
+              </li>
+
+              <li class="features__item">
+                <div class="features__item-header">
+                  <span class="features__numbering">03</span>
+                  <h3 class="features__sub-heading u-sub-heading">
+                    Everything you need in one place
+                  </h3>
+                </div>
+                <p class="features__item-description">
+                  Stop jumping from one service to another to communicate, store
+                  files, track tasks and share documents. Manage offers an
+                  all-in-one team productivity solution.
+                </p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="testimonials">
+        <h2 class="testimonials__heading u-heading-secondary u-text-center">
+          What they’ve said
+        </h2>
+        <div class="testimonials__carousel">
+          <div class="testimonials__item item u-flex-column">
+            <img
+              src="./images/avatar-ali.png"
+              alt="A head shot of a women smiling"
+              class="testimonials__avatar"
+              width="144"
+              height="144"
+            />
+            <h3 class="testimonials__name u-sub-heading">Ali Bravo</h3>
+            <p class="testimonials__description">
+              “We have been able to cancel so many other subscriptions since
+              using Manage. There is no more cross-channel confusion and
+              everyone is much more focused.”
+            </p>
+          </div>
+
+          <div class="testimonials__item item u-flex-column">
+            <img
+              src="./images/avatar-anisha.png"
+              alt="A head shot of a women smiling"
+              class="testimonials__avatar"
+              width="144"
+              height="144"
+            />
+            <h3 class="testimonials__name u-sub-heading">Anisha Li</h3>
+            <p class="testimonials__description">
+              “Manage has supercharged our team’s workflow. The ability to
+              maintain visibility on larger milestones at all times keeps
+              everyone motivated.”
+            </p>
+          </div>
+
+          <div class="testimonials__item item u-flex-column">
+            <img
+              src="./images/avatar-richard.png"
+              alt="A head shot of a women smiling"
+              class="testimonials__avatar"
+              width="144"
+              height="144"
+            />
+            <h3 class="testimonials__name u-sub-heading">Richard Watts</h3>
+            <p class="testimonials__description">
+              “Manage allows us to provide structure and process. It keeps us
+              organized and focused. I can’t stop recommending them to everyone
+              I talk to!”
+            </p>
+          </div>
+
+          <div class="testimonials__item item u-flex-column">
+            <img
+              src="./images/avatar-shanai.png"
+              alt="A head shot of a women smiling"
+              class="testimonials__avatar"
+              width="144"
+              height="144"
+            />
+            <h3 class="testimonials__name u-sub-heading">Shanai Gough</h3>
+            <p class="testimonials__description">
+              “Their software allows us to track, manage and collaborate on our
+              projects from anywhere. It keeps the whole team in-sync without
+              being intrusive.”
+            </p>
+          </div>
+        </div>
+        <a href="#" class="testimonials__btn btn btn--primary">Get Started</a>
+      </section>
+
+      <section class="simplify">
+        <div class="l-section-container">
+          <div class="l-section-inner u-flex-column u-flex-md-row">
+            <h2 class="simplify__heading u-heading-secondary u-text-center">
+              Simplify how your team works today.
+            </h2>
+            <a href="#" class="simplify__btn btn btn--primary">Get Started</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="l-section-container">
+        <div class="l-section-inner">
+          <div class="footer__form-wrapper">
+            <form class="form u-flex-row">
+              <input
+                type="email"
+                placeholder="Updates in your inbox…"
+                class="form__field"
+                required
+              />
+              <button type="submit" class="form__btn btn btn--primary">
+                Go
+              </button>
+            </form>
+            <p class="footer__rights">Copyright 2020. All Rights Reserved</p>
+          </div>
+          <div class="footer__brand u-flex-column">
+            <a href="/"
+              ><img
+                class="footer__logo"
+                src="./images/logo.svg"
+                alt="Manage Home"
+                width="100"
+                height="100"
+            /></a>
+
+            <nav class="footer__social" aria-label="Social">
+              <a href="#" class="footer__social-link">
+                <img
+                  src="./images/icon-facebook.svg"
+                  alt="Manage Facebook Home"
+                  class="footer__icons"
+                  width="20"
+                  height="20"
+                />
+              </a>
+              <a href="#" class="footer__social-link">
+                <img
+                  src="./images/icon-youtube.svg"
+                  alt="Manage Youtube Home"
+                  class="footer__icons"
+                  width="20"
+                  height="20"
+                />
+              </a>
+              <a href="#" class="footer__social-link">
+                <img
+                  src="./images/icon-twitter.svg"
+                  alt="Manage Twitter Home"
+                  class="footer__icons"
+                  width="20"
+                  height="20"
+                />
+              </a>
+              <a href="#" class="footer__social-link">
+                <img
+                  src="./images/icon-pinterest.svg"
+                  alt="Manage Pinterest Home"
+                  class="footer__icons"
+                  width="20"
+                  height="20"
+                />
+              </a>
+              <a href="#" class="footer__social-link">
+                <img
+                  src="./images/icon-instagram.svg"
+                  alt="Manage Instagram Home"
+                  class="footer__icons"
+                  width="20"
+                  height="20"
+                />
+              </a>
+            </nav>
+          </div>
+
+          <div class="footer__list-group u-flex-row">
+            <ul class="footer__list u-flex-column">
+              <li>
+                <a class="footer__link" href="#"> Home </a>
+              </li>
+              <li>
+                <a class="footer__link" href="#"> Pricing </a>
+              </li>
+              <li>
+                <a class="footer__link" href="#"> Products </a>
+              </li>
+              <li>
+                <a class="footer__link" href="#"> About Us </a>
+              </li>
+            </ul>
+
+            <ul class="footer__list">
+              <li>
+                <a class="footer__link" href="#"> Careers </a>
+              </li>
+              <li>
+                <a class="footer__link" href="#"> Community </a>
+              </li>
+              <li>
+                <a class="footer__link" href="#"> Privacy Policy </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <div style="display: none" class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Your Name Here</a>.
+    </div>
+  </body>
+</html>
