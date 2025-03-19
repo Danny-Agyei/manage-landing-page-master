@@ -40,4 +40,33 @@ function toggleNavbar() {
   }
 }
 
+// Carousel
+$(document).ready(function () {
+  $(".owl-carousel").owlCarousel({
+    responsiveClass: true,
+    autoPlayTimeout: 1000,
+    autoplaySpeed: 1800,
+    smartSpeed: 800,
+    autoplay: true,
+    margin: 10,
+    loop: true,
+    center: true,
+    nav: false,
+    dots: true,
+    items: 1,
+    responsive: {
+      768: {
+        items: 2,
+      },
+      992: {
+        items: 2,
+        margin: 30,
+      },
+      1140: {
+        items: 4,
+      },
+    },
+  });
+});
+
 btnNavbarTriggers.forEach((btn) => btn.addEventListener("click", toggleNavbar));
