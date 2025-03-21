@@ -1,4 +1,4 @@
-const page = document.querySelector("body");
+const page = document.querySelector("html");
 const btnNavbarTriggers = document.querySelectorAll(".js-navbar-trigger");
 const btnOpenMenu = document.getElementById("js-btn-open");
 const btnCloseMenu = document.getElementById("js-btn-close");
@@ -55,15 +55,16 @@ $(document).ready(function () {
     dots: true,
     items: 1,
     responsive: {
-      768: {
+      820: {
         items: 2,
-      },
-      992: {
-        items: 2,
-        margin: 30,
+        margin: 50,
       },
       1140: {
-        items: 4,
+        items: 2,
+        margin: 10,
+      },
+      1280: {
+        items: 3,
       },
     },
   });
