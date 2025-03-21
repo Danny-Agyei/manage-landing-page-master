@@ -1,4 +1,5 @@
 const page = document.querySelector("html");
+const pageHeader = document.getElementById("js-site-header");
 const btnNavbarTriggers = document.querySelectorAll(".js-navbar-trigger");
 const btnOpenMenu = document.getElementById("js-btn-open");
 const btnCloseMenu = document.getElementById("js-btn-close");
@@ -70,4 +71,23 @@ $(document).ready(function () {
   });
 });
 
+let previousDistanceScrolled = 0;
+
+function togglePageHeaderSlide() {
+  const currentDistanceScrolled = Math.round(this.scrollY);
+
+  if (
+    currentDistanceScrolled === 0 ||
+    previousDistanceScrolled < currentDistanceScrolled
+  ) {
+    pageHeader.classList.remove("site-header--sticky");
+    pageHeader.classList.add("site-header--normal");
+  } else {
+    pageHeader.classList.add("site-header--sticky");
+    pageHeader.classList.remove("site-header--normal");
+  }
+  previousDistanceScrolled = currentDistanceScrolled;
+}
+
 btnNavbarTriggers.forEach((btn) => btn.addEventListener("click", toggleNavbar));
+window.addEventListener("scroll", togglePageHeaderSlide);
