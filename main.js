@@ -14,20 +14,18 @@ function toggleNavbar() {
   if (isVisible) {
     btnOpenMenu.setAttribute("aria-expanded", false);
     btnCloseMenu.setAttribute("aria-expanded", false);
+
     page.classList.remove("noscroll");
     navbarOverlay.classList.remove("is-visible");
     navbarWrapper.classList.remove("is-visible");
 
-    // setTimeout(() => {
     navbarMenu.classList.add("is-open");
-    // }, 500);
 
     btnOpenMenu.style.display = "block";
     btnCloseMenu.style.display = "none";
   } else {
     navbarMenu.classList.add("is-open");
 
-    // setTimeout(() => {
     page.classList.add("noscroll");
     navbarOverlay.classList.add("is-visible");
     navbarWrapper.classList.add("is-visible");
@@ -37,7 +35,6 @@ function toggleNavbar() {
 
     btnOpenMenu.setAttribute("aria-expanded", true);
     btnCloseMenu.setAttribute("aria-expanded", true);
-    // }, 200);
   }
 }
 
@@ -59,35 +56,42 @@ $(document).ready(function () {
       820: {
         items: 2,
         margin: 50,
+        dots: false,
       },
       1140: {
         items: 2,
         margin: 10,
+        dots: false,
       },
       1280: {
         items: 3,
+        dots: false,
       },
     },
   });
 });
 
-let previousDistanceScrolled = 0;
+let lastScrolled = 0;
 
-function togglePageHeaderSlide() {
-  const currentDistanceScrolled = Math.round(this.scrollY);
+function handlePageStickyHeader() {
+  const currentScrolled = Math.round(this.scrollY);
 
-  if (
-    currentDistanceScrolled === 0 ||
-    previousDistanceScrolled < currentDistanceScrolled
-  ) {
+  console.log("first", currentScrolled, lastScrolled);
+  if (currentScrolled === 0) {
     pageHeader.classList.remove("site-header--sticky");
-    pageHeader.classList.add("site-header--normal");
-  } else {
+    pageHeader.classList.remove("site-header--normal");
+
+  } else if (lastScrolled > currentScrolled) {
     pageHeader.classList.add("site-header--sticky");
     pageHeader.classList.remove("site-header--normal");
+
+  } else {
+    pageHeader.classList.remove("site-header--sticky");
+    pageHeader.classList.add("site-header--normal");
   }
-  previousDistanceScrolled = currentDistanceScrolled;
+
+  lastScrolled = currentScrolled;
 }
 
 btnNavbarTriggers.forEach((btn) => btn.addEventListener("click", toggleNavbar));
-window.addEventListener("scroll", togglePageHeaderSlide);
+window.addEventListener("scroll", handlePageStickyHeader);
