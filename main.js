@@ -74,20 +74,22 @@ $(document).ready(function () {
 let lastScrolled = 0;
 
 function handlePageStickyHeader() {
-  const currentScrolled = Math.round(this.scrollY);
+  const currentScrolled = window.scrollY;
+  const STICKY_HEADER_CLASS = "site-header--sticky";
+  const DEFAULT_HEADER_CLASS = "site-header--normal";
 
   console.log("first", currentScrolled, lastScrolled);
   if (currentScrolled === 0) {
-    pageHeader.classList.remove("site-header--sticky");
-    pageHeader.classList.remove("site-header--normal");
+    pageHeader.classList.remove(STICKY_HEADER_CLASS);
+    pageHeader.classList.remove(DEFAULT_HEADER_CLASS);
 
   } else if (lastScrolled > currentScrolled) {
-    pageHeader.classList.add("site-header--sticky");
-    pageHeader.classList.remove("site-header--normal");
+    pageHeader.classList.add(STICKY_HEADER_CLASS);
+    pageHeader.classList.remove(DEFAULT_HEADER_CLASS);
 
   } else {
-    pageHeader.classList.remove("site-header--sticky");
-    pageHeader.classList.add("site-header--normal");
+    pageHeader.classList.remove(STICKY_HEADER_CLASS);
+    pageHeader.classList.add(DEFAULT_HEADER_CLASS);
   }
 
   lastScrolled = currentScrolled;
