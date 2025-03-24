@@ -398,7 +398,6 @@ footer li {
     background-color: var(--clr-neutral-100);
     border-radius: var(--radius-sm);
     left: 50%;
-    max-width: calc(var(--container-width) - var(--size-10x));
     opacity: 0;
     padding: var(--size-10x) var(--size-6x);
     position: fixed;
@@ -741,6 +740,7 @@ footer li {
     /* Site Header  */
     .navbar__wrapper {
         max-width: var(--container-width);
+        width: 100%;
     }
 
     /* Hero */
